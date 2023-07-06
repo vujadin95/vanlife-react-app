@@ -173,3 +173,119 @@ footer p {
 }
 
 /* end about page */
+
+/* start vans page */
+
+.vans-page {
+  padding: 54px 26px 83px;
+  color: #161616;
+}
+
+.vans-page-title {
+  font-size: 32px;
+  line-height: 34px;
+  padding-bottom: 23px;
+}
+
+.vans-list-container {
+  padding-top: 56px;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 26px 35px;
+
+}
+
+.vans-list-container img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.van-desc {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 5px;
+}
+
+.van-desc span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.van-type-btn {
+  color: #FFEAD0;
+  font-size: 16px;
+  line-height: 32px;
+  padding: 2.5px 11px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.van-type-btn.simple {
+  background-color: #E17654;
+}
+
+.van-type-btn.rugged {
+  background-color: #115E59;
+}
+
+.van-type-btn.luxury {
+  background-color: #161616;
+}
+
+/* end vans page */
+
+/* start van detail page */
+
+.van-detail-page-container {
+  padding: 40px 26px 83px;
+  color: #161616;
+}
+
+.van-detail-page-container img {
+  width: 100%;
+  border-radius: 5px;
+  vertical-align: middle;
+  margin-bottom: 50px;
+}
+
+.van-detail-page-container h2 {
+  font-size: 32px;
+  line-height: 34px;
+  padding-top: 23px;
+}
+
+.van-detail-price {
+  font-size: 24px;
+  line-height: 44px;
+  font-weight: 700;
+  padding: 10px 0;
+}
+
+.van-detail-price span {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.van-detail-desc {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.van-detail-page-container a {
+  background-color: #FF8C38;
+  padding: 9px 0;
+  line-height: 32px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  color: #FFFFFF;
+  display: block;
+  margin-top: 22px;
+}
+
+/* end van detail page */
