@@ -94,13 +94,13 @@ header {
   line-height: 40px;
 }
 
-nav {
+header nav {
   display: flex;
   gap: 20px;
   align-items: center;
 }
 
-nav a {
+header nav a {
   text-transform: capitalize;
   font-weight: 600;
   line-height: 23px;
@@ -289,3 +289,13 @@ footer p {
 }
 
 /* end van detail page */
+
+.host-layout {
+  display: flex;
+  gap: 29px;
+  color: #4D4D4D;
+  padding: 33px 26px 45px;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 500;
+}
