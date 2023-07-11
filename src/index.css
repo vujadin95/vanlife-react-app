@@ -250,6 +250,54 @@ footer p {
   background-color: #161616;
 }
 
+.vans-filter-list {
+  display: flex;
+  gap: 20px;
+}
+
+.vans-filter-list .van-type-btn {
+  background: #FFEAD0;
+  color: #4D4D4D;
+  font-weight: 500;
+}
+
+.vans-filter-list .van-type-btn:hover {
+  color: #FFFFFF;
+}
+
+.vans-filter-list .van-type-btn.simple:hover {
+  background-color: #E17654;
+}
+
+.vans-filter-list .van-type-btn.simple.selected {
+  background-color: #E17654;
+  color: #FFFFFF;
+}
+
+.vans-filter-list .van-type-btn.rugged.selected {
+  background-color: #115E59;
+  color: #FFFFFF;
+}
+
+.vans-filter-list .van-type-btn.luxury.selected {
+  background-color: #161616;
+  color: #FFFFFF;
+}
+
+.vans-filter-list .van-type-btn.rugged:hover {
+  background-color: #115E59;
+}
+
+.vans-filter-list .van-type-btn.luxury:hover {
+  background-color: #161616;
+}
+
+.vans-filter-list .van-type-btn.clear {
+  background-color: unset;
+  text-decoration: underline;
+  color: #4D4D4D;
+}
+
 /* end vans page */
 
 /* start van detail page */
@@ -258,6 +306,10 @@ footer p {
   padding: 40px 26px 83px;
   color: #161616;
 }
+
+/* .van-detail-page-container .back-button{
+  
+} */
 
 .van-detail-page-container img {
   width: 100%;
@@ -289,7 +341,7 @@ footer p {
   font-weight: 500;
 }
 
-.van-detail-page-container a {
+.rent-this-van-btn {
   background-color: #FF8C38;
   padding: 9px 0;
   line-height: 32px;

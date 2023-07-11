@@ -13,6 +13,9 @@ const VanDetail = () => {
 
   return (
     <section className="van-detail-page-container">
+      <Link to=".." relative="path" className="back-button">
+        &larr; <span>Back to all vans</span>
+      </Link>
       {van ? (
         <>
           <img src={van.imageUrl} alt={van.name} />
@@ -23,7 +26,9 @@ const VanDetail = () => {
             <span>/day</span>
           </p>
           <p className="van-detail-desc">{van.description}</p>
-          <Link to={"/"}>Rent this van</Link>
+          <Link className="rent-this-van-btn" to={"/"}>
+            Rent this van
+          </Link>
         </>
       ) : (
         <h1>Loading...</h1>
