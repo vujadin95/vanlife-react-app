@@ -20,7 +20,7 @@ const About = () => {
             <br />
             Your van is ready
           </h3>
-          <Link to={"/about"}>Explore our vans</Link>
+          <Link to={"/vans"}>Explore our vans</Link>
         </div>
       </section>
     </div>

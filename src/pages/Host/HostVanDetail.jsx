@@ -19,7 +19,7 @@ const HostVanDetail = () => {
     return <h1>Loading...</h1>;
   }
   return (
-    <section className="host-detail-container">
+    <section className="host-van-detail-container">
       <Link to=".." relative="path" className="back-button">
         &larr; <span>Back to all vans</span>
       </Link>
@@ -35,7 +35,7 @@ const HostVanDetail = () => {
             </p>
           </div>
         </div>
-        <nav>
+        <nav className="host-vans-nav">
           <NavLink
             to={"."}
             end
@@ -44,10 +44,10 @@ const HostVanDetail = () => {
             Details
           </NavLink>
           <NavLink
-            to={"price"}
+            to={"pricing"}
             style={({ isActive }) => (isActive ? activeStyle : null)}
           >
-            Price
+            Pricing
           </NavLink>
           <NavLink
             to={"photos"}
@@ -56,7 +56,7 @@ const HostVanDetail = () => {
             Photos
           </NavLink>
         </nav>
-        <Outlet />
+        <Outlet context={van} />
       </div>
     </section>
   );

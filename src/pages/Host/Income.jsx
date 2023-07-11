@@ -1,4 +1,4 @@
 const Income = () => {
-  return <h1>Here is Income page</h1>;
+  return <h3>Here is Income page</h3>;
 };
 export default Income;

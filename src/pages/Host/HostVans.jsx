@@ -25,9 +25,9 @@ const HostVans = () => {
   ));
 
   return (
-    <div className="host-vans-container">
+    <div className="host-vans-page">
       <h1>Your listed vans</h1>
-      <div className="host-vans-wrapper">
+      <div className="host-vans-container">
         {vans.length > 0 ? vansElement : <h1>Loading...</h1>}
       </div>
     </div>

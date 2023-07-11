@@ -1,4 +1,4 @@
 const Review = () => {
-  return <div>Here will go Review page</div>;
+  return <h3>Here will go Review page</h3>;
 };
 export default Review;

@@ -8,7 +8,7 @@ const HostLayout = () => {
   };
   return (
     <>
-      <nav className="host-layout">
+      <nav className="host-layout-nav">
         <NavLink
           to={`.`}
           end

@@ -4,13 +4,13 @@ import Header from "../components/Header";
 
 const Layout = () => {
   return (
-    <>
+    <div className="app-wrapper">
       <Header />
       <main>
         <Outlet />
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 export default Layout;
