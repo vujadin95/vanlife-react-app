@@ -1,5 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 
+import userUrl from "../assets/images/user.png";
+
 const Header = () => {
   const activeStyle = {
     fontWeight: "bold",
@@ -30,6 +32,13 @@ const Header = () => {
         >
           vans
         </NavLink>
+        <Link to={"login"}>
+          <img
+            style={{ verticalAlign: "middle" }}
+            src={userUrl}
+            alt="user icon"
+          />
+        </Link>
       </nav>
     </header>
   );

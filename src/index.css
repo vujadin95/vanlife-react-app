@@ -44,9 +44,12 @@ a {
 
 
 .app-wrapper {
+  background-color: #fff7ed;
   max-width: 550px;
   margin: auto;
-  background-color: #fff7ed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .home-page {
@@ -129,6 +132,7 @@ footer {
   color: #AAAAAA;
   padding: 25.5px;
   text-align: center;
+  margin-top: auto;
 }
 
 footer p {
@@ -530,3 +534,98 @@ footer p {
 }
 
 /* end host-van-detail-page */
+
+/* start not found page */
+
+.not-found {
+  padding: 105px 26px;
+}
+
+.not-found h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 42px;
+  color: #161616;
+  padding-bottom: 30px;
+}
+
+.not-found a {
+  display: block;
+  background-color: #161616;
+  color: #FFFFFF;
+  padding: 12.5px;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+/* end not found page */
+
+/* start login page */
+
+.login-container {
+  padding: 50px 26px;
+  color: #161616;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container {
+  width: 100%;
+  padding-top: 48px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container input {
+  padding: 9px 13px;
+  border: 1px solid #D1D5DB;
+  font-family: inherit;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.form-container input:focus {
+  outline: none;
+}
+
+.form-container input:first-of-type {
+  border-radius: 6px 6px 0px 0px;
+  border-bottom: none;
+}
+
+.form-container input:last-of-type {
+  border-radius: 0px 0px 6px 6px;
+}
+
+.form-container button {
+  background-color: #FF8C38;
+  padding: 18px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #FFFFFF;
+  border-radius: 6px;
+  margin-top: 22px;
+}
+
+.login-container p {
+  padding-top: 47px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.login-container p a {
+  color: #FF8C38;
+}
+
+.login-container p a:hover {
+  text-decoration: underline;
+}
+
+/* end login page */

@@ -1,21 +1,17 @@
-import { useEffect, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+// import { useState } from "react";
+import { Link, useSearchParams, useLoaderData } from "react-router-dom";
+import { getVans } from "../../utils";
+
+export function loader() {
+  return getVans();
+}
 
 const Vans = () => {
-  const [vansList, setVansList] = useState([]);
-
   const [searchParams, setSearchParams] = useSearchParams();
+  // const [error, setError] = useState(null);
+
   const typeFilter = searchParams.get("type");
-
-  useEffect(() => {
-    fetch("api/vans")
-      .then((res) => res.json())
-      .then((data) => setVansList(data.vans));
-  }, []);
-
-  const filteredVans = typeFilter
-    ? vansList.filter((van) => van.type.toLowerCase() === typeFilter)
-    : vansList;
+  const vansList = useLoaderData();
 
   const handleFilterChange = (key, value) => {
     setSearchParams((prevParams) => {
@@ -28,10 +24,14 @@ const Vans = () => {
     });
   };
 
+  const filteredVans = typeFilter
+    ? vansList.filter((van) => van.type.toLowerCase() === typeFilter)
+    : vansList;
+
   const vansListElement = filteredVans.map((van) => (
     <Link
       to={van.id}
-      state={{ search: searchParams.toString() }}
+      state={{ search: searchParams.toString(), type: typeFilter }}
       key={van.id}
       className="van-card"
     >
@@ -46,6 +46,10 @@ const Vans = () => {
       <button className={`van-type-btn ${van.type}`}>{van.type}</button>
     </Link>
   ));
+
+  // if (error) {
+  //   return <h1>There was an error: {error.message}</h1>;
+  // }
 
   return (
     <section className="vans-page">
