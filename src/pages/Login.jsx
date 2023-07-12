@@ -1,6 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
+
+export function loader({ request }) {
+  return new URL(request.url).searchParams.get("message");
+}
 const Login = () => {
+  const message = useLoaderData();
   const [loginUserData, setLoginUserData] = useState({
     email: "",
     password: "",
@@ -21,6 +26,7 @@ const Login = () => {
   return (
     <section className="login-container">
       <h1>Sign in to your account</h1>
+      {message && <h2 className="red">{message}</h2>}
       <form className="form-container" onSubmit={handleSumbit}>
         <input
           onChange={handleChange}

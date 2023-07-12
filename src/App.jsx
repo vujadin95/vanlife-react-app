@@ -25,7 +25,7 @@ import HostVanPricing from "./pages/Host/HostVanPricing";
 import HostVanPhotos from "./pages/Host/HostVanPhotos";
 import NotFound from "./pages/NotFound";
 import Error from "./components/Error";
-import Login from "./pages/Login";
+import Login, { loader as loginLoader } from "./pages/Login";
 
 import { requireAuth } from "./utils";
 
@@ -40,7 +40,7 @@ const router = createBrowserRouter(
         loader={vansLoader}
         errorElement={<Error />}
       />
-      <Route path="login" element={<Login />} />
+      <Route path="login" element={<Login />} loader={loginLoader} />
       <Route path="vans/:id" element={<VanDetail />} loader={vanDetailLoader} />
 
       <Route path="host" element={<HostLayout />}>
@@ -59,7 +59,11 @@ const router = createBrowserRouter(
           element={<Review />}
           loader={async () => await requireAuth()}
         />
-        <Route path="vans" element={<HostVans />} loader={hostVansLoader} />
+        <Route
+          path="/host/vans"
+          element={<HostVans />}
+          loader={hostVansLoader}
+        />
         <Route
           path="vans/:id"
           element={<HostVanDetail />}

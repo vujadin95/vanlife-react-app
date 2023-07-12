@@ -628,4 +628,9 @@ footer p {
   text-decoration: underline;
 }
 
+.red {
+  color: red;
+  padding-top: 10px;
+}
+
 /* end login page */

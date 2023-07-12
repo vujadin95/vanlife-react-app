@@ -14,6 +14,7 @@ const HostVanDetail = () => {
   };
 
   const van = useLoaderData()[0];
+  console.log(van);
 
   return (
     <section className="host-van-detail-container">

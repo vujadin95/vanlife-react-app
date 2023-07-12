@@ -1,4 +1,4 @@
-import { redirect } from "react-router-dom";
+import { redirect } from "../mutationOfRedirect";
 
 export async function getVans(id) {
   const url = id ? `/api/vans/${id}` : "/api/vans";
@@ -29,10 +29,9 @@ export async function getHostVans(id) {
 }
 
 export async function requireAuth() {
-  const isLogedIn = false;
-  if (!isLogedIn) {
-    const response = redirect("/login");
-    response.body = true;
-    return response;
+  const isLoggedIn = false;
+  if (!isLoggedIn) {
+    throw redirect("/login?message=You must log in first");
   }
+  return null;
 }
