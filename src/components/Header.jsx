@@ -8,6 +8,10 @@ const Header = () => {
     textDecoration: "underline",
     color: "#161616",
   };
+
+  function fakeLogOut() {
+    localStorage.removeItem("loggedin");
+  }
   return (
     <header>
       <Link className="logo" to={"/"}>
@@ -39,6 +43,9 @@ const Header = () => {
             alt="user icon"
           />
         </Link>
+        <button className="logout-btn" onClick={fakeLogOut}>
+          Log Out
+        </button>
       </nav>
     </header>
   );

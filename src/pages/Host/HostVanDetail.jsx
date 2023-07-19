@@ -1,9 +1,10 @@
 import { Link, NavLink, Outlet, useLoaderData } from "react-router-dom";
 import { getHostVans, requireAuth } from "../../utils";
 
-export async function loader({ params }) {
-  await requireAuth();
-  return getHostVans(params.id);
+// eslint-disable-next-line react-refresh/only-export-components
+export async function loader({ params, request }) {
+  await requireAuth(request);
+  return await getHostVans(params.id);
 }
 
 const HostVanDetail = () => {
@@ -13,8 +14,7 @@ const HostVanDetail = () => {
     color: "#161616",
   };
 
-  const van = useLoaderData()[0];
-  console.log(van);
+  const van = useLoaderData();
 
   return (
     <section className="host-van-detail-container">

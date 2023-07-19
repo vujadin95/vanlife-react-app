@@ -50,6 +50,7 @@ a {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .home-page {
@@ -629,8 +630,23 @@ footer p {
 }
 
 .red {
-  color: red;
+  color: #cc0000;
   padding-top: 10px;
+}
+
+.logout-btn {
+  background-color: #E17654;
+  padding: 5px 10px;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  border-radius: 5px;
+  transition: all ease-in-out 100ms;
+}
+
+.logout-btn:hover {
+  background-color: #4D4D4D;
+  color: #FFFFFF;
 }
 
 /* end login page */

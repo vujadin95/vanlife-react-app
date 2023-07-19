@@ -2,8 +2,9 @@ import { Link, useLoaderData } from "react-router-dom";
 import { getHostVans } from "../../utils";
 import { requireAuth } from "../../utils";
 
-export async function loader() {
-  await requireAuth();
+// eslint-disable-next-line react-refresh/only-export-components
+export async function loader({ request }) {
+  await requireAuth(request);
   return getHostVans();
 }
 

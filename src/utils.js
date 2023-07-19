@@ -28,10 +28,33 @@ export async function getHostVans(id) {
   return data.vans;
 }
 
-export async function requireAuth() {
-  const isLoggedIn = false;
+export async function requireAuth(request) {
+  // const isLoggedIn = false;
+  const isLoggedIn = localStorage.getItem("loggedin");
+  const pathname = new URL(request.url).pathname;
+
   if (!isLoggedIn) {
-    throw redirect("/login?message=You must log in first");
+    throw redirect(
+      `/login?message=You must log in first&redirectedTo=${pathname}`
+    );
   }
   return null;
+}
+
+export async function loginUser(creds) {
+  const res = await fetch("/api/login", {
+    method: "post",
+    body: JSON.stringify(creds),
+  });
+  const data = await res.json();
+
+  if (!res.ok) {
+    throw {
+      message: data.message,
+      statusText: res.statusText,
+      status: res.status,
+    };
+  }
+
+  return data;
 }
