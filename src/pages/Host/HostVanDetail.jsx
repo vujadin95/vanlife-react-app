@@ -1,10 +1,10 @@
 import { Link, NavLink, Outlet, useLoaderData } from "react-router-dom";
-import { getHostVans, requireAuth } from "../../utils";
+import { getVan, requireAuth } from "../../utils";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export async function loader({ params, request }) {
   await requireAuth(request);
-  return await getHostVans(params.id);
+  return await getVan(params.id);
 }
 
 const HostVanDetail = () => {

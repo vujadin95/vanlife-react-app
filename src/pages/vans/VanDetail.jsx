@@ -1,8 +1,8 @@
 import { Link, useLocation, useLoaderData } from "react-router-dom";
-import { getVans } from "../../utils";
+import { getVan } from "../../utils";
 
 export function loader({ params }) {
-  return getVans(params.id);
+  return getVan(params.id);
 }
 
 const VanDetail = () => {
